@@ -1,3 +1,4 @@
+import Button from './Button'
 import './Counter.css'
 
 function Counter({ count, incrementBy, onIncrement, onDecrement, onReset, onIncrementChange }) {
@@ -33,15 +34,15 @@ function Counter({ count, incrementBy, onIncrement, onDecrement, onReset, onIncr
         />
       </div>
       <div className="button-container">
-        <button onClick={onDecrement} className="btn btn-decrement">
+        <Button onClick={onDecrement} variant="decrement">
           - {incrementBy}
-        </button>
-        <button onClick={onReset} className="btn btn-reset">
+        </Button>
+        <Button onClick={onReset} variant="reset">
           Reset
-        </button>
-        <button onClick={onIncrement} className="btn btn-increment">
+        </Button>
+        <Button onClick={onIncrement} variant="increment">
           + {incrementBy}
-        </button>
+        </Button>
       </div>
     </div>
   )
