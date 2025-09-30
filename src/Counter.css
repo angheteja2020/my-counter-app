@@ -53,3 +53,35 @@
   background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
   color: white;
 }
+
+.message {
+  margin: 1rem 0;
+  padding: 0.75rem;
+  border-radius: 8px;
+  font-weight: 600;
+  text-align: center;
+  animation: slideIn 0.3s ease;
+}
+
+.message-negative {
+  background-color: #fee;
+  color: #c33;
+  border: 2px solid #fcc;
+}
+
+.message-high {
+  background-color: #e7f5ff;
+  color: #0066cc;
+  border: 2px solid #99ccff;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
