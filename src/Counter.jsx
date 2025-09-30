@@ -1,6 +1,6 @@
 import './Counter.css'
 
-function Counter({ count, onIncrement, onDecrement, onReset }) {
+function Counter({ count, incrementBy, onIncrement, onDecrement, onReset, onIncrementChange }) {
   // Determine which message to show based on count
   const getMessage = () => {
     if (count < 0) {
@@ -21,15 +21,26 @@ function Counter({ count, onIncrement, onDecrement, onReset }) {
           {message.text}
         </div>
       )}
+      <div className="increment-control">
+        <label htmlFor="increment-input">Increment/Decrement by: </label>
+        <input 
+          id="increment-input"
+          type="number" 
+          value={incrementBy} 
+          onChange={onIncrementChange}
+          className="increment-input"
+          min="1"
+        />
+      </div>
       <div className="button-container">
         <button onClick={onDecrement} className="btn btn-decrement">
-          -
+          - {incrementBy}
         </button>
         <button onClick={onReset} className="btn btn-reset">
           Reset
         </button>
         <button onClick={onIncrement} className="btn btn-increment">
-          +
+          + {incrementBy}
         </button>
       </div>
     </div>

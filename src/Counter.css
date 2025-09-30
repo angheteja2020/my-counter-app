@@ -85,3 +85,37 @@
     transform: translateY(0);
   }
 }
+
+.increment-control {
+  margin: 1.5rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+.increment-control label {
+  color: #555;
+  font-weight: 500;
+}
+
+.increment-input {
+  width: 80px;
+  padding: 0.5rem;
+  font-size: 1.1rem;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: bold;
+  transition: border-color 0.3s ease;
+}
+
+.increment-input:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.increment-input:hover {
+  border-color: #aaa;
+}
